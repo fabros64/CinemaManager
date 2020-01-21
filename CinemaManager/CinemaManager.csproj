@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9230FD91-F6A0-4890-BABE-0CA7A1628406}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CinemaManager</RootNamespace>
+    <AssemblyName>CinemaManager</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangeDeleteFilmShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeDeleteFilmShow.Designer.cs">
+      <DependentUpon>ChangeDeleteFilmShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeDeleteUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeDeleteUserForm.Designer.cs">
+      <DependentUpon>ChangeDeleteUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CinemaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CinemaForm.Designer.cs">
+      <DependentUpon>CinemaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Databases\FilmScreeningsDb.cs" />
+    <Compile Include="Databases\MoviesDb.cs" />
+    <Compile Include="Databases\ShoppingHistoryDb.cs" />
+    <Compile Include="Databases\TicketsDb.cs" />
+    <Compile Include="ChangeDeleteMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeDeleteMovie.Designer.cs">
+      <DependentUpon>ChangeDeleteMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTicketsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteTicketsForm.Designer.cs">
+      <DependentUpon>DeleteTicketsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IMovie.cs" />
+    <Compile Include="Interfaces\IPayment.cs" />
+    <Compile Include="ManageFilmShowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageFilmShowForm.Designer.cs">
+      <DependentUpon>ManageFilmShowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageMovieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageMovieForm.Designer.cs">
+      <DependentUpon>ManageMovieForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IAction.cs" />
+    <Compile Include="Interfaces\IUsersDB.cs" />
+    <Compile Include="Managers\DbModel.cs" />
+    <Compile Include="Managers\FileDatabaseManagement.cs" />
+    <Compile Include="Interfaces\IBasicFileOperations.cs" />
+    <Compile Include="Interfaces\ILogIn.cs" />
+    <Compile Include="LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\LogInManager.cs" />
+    <Compile Include="Managers\MovieManager.cs" />
+    <Compile Include="Managers\PaymentClass\CardPayment.cs" />
+    <Compile Include="Managers\PaymentClass\CashPayment.cs" />
+    <Compile Include="Managers\PaymentFactory.cs" />
+    <Compile Include="Models\EditScreening.cs" />
+    <Compile Include="Models\FilmShow.cs" />
+    <Compile Include="Models\NewestScreening.cs" />
+    <Compile Include="Models\PaymentModel.cs" />
+    <Compile Include="Models\RoomPlace.cs" />
+    <Compile Include="Models\Ticket.cs" />
+    <Compile Include="Models\Const.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\LoginData.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\TicketToShow.cs" />
+    <Compile Include="PaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentForm.designer.cs">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Databases\UsersDb.cs" />
+    <Compile Include="SeatingManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatingManagementForm.designer.cs">
+      <DependentUpon>SeatingManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellTicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellTicketForm.Designer.cs">
+      <DependentUpon>SellTicketForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChangeDeleteFilmShow.resx">
+      <DependentUpon>ChangeDeleteFilmShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeDeleteUserForm.resx">
+      <DependentUpon>ChangeDeleteUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CinemaForm.resx">
+      <DependentUpon>CinemaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeDeleteMovie.resx">
+      <DependentUpon>ChangeDeleteMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteTicketsForm.resx">
+      <DependentUpon>DeleteTicketsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageFilmShowForm.resx">
+      <DependentUpon>ManageFilmShowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageMovieForm.resx">
+      <DependentUpon>ManageMovieForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentForm.resx">
+      <DependentUpon>PaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatingManagementForm.resx">
+      <DependentUpon>SeatingManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellTicketForm.resx">
+      <DependentUpon>SellTicketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\CinemaManager.Model.Movie.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-overlay-5b3b365b30f975.8372723615306071952006.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
